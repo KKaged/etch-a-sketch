@@ -24,12 +24,14 @@
 }
 .grid-container{
     background-color: white;
-    border: solid;
+    border: 3px solid black;
     width: 700px;
     height: 700px;
     border-radius: 10px;
-    border-bottom-width: 7px;
-    border-right-width: 7px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
 }
 .title{
     font-weight: bolder;
@@ -51,4 +53,12 @@ button{
 }
 button:hover{
     background-color: rgb(94, 171, 247);
+}
+.grid-cell{
+    border: 1px solid black;
+    flex: 1;
+    display: flex;
+}
+.grid-cell:hover{
+    background-color: grey;
 }
