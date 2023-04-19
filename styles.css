@@ -28,9 +28,10 @@
     width: 700px;
     height: 700px;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: inline-grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+
 
 }
 .title{
@@ -56,8 +57,6 @@ button:hover{
 }
 .grid-cell{
     border: 1px solid black;
-    flex: 1;
-    display: flex;
 }
 .grid-cell:hover{
     background-color: grey;
