@@ -57,7 +57,9 @@ button:hover{
 }
 .grid-cell{
     border: 1px solid black;
+    background-color: rgb(255, 255, 255);
 }
-.grid-cell:hover{
+.color{
     background-color: grey;
+    border: 1px solid black;
 }

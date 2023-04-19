@@ -1,6 +1,8 @@
 const container = document.querySelector(".grid-container");
 const gridCell = document.createElement("div");
 const gridSize = document.getElementById("quantity");
+const box = document.querySelector("div");
+const reset = document.querySelector("button");
 
 gridSize.addEventListener("input", function () {
   console.log(gridSize.value);
@@ -33,4 +35,14 @@ updateGrid = () => {
     container.appendChild(gridCell);
   }
 };
-gridCell();
+box.addEventListener("mouseover", function (hover) {
+  hover.target.classList.replace("grid-cell", "color");
+});
+
+reset.addEventListener("click", function () {
+  gridSize.value = "";
+  container.innerHTML = "";
+  container.style.setProperty("grid-template-columns", `repeat(16 ,2fr)`);
+  container.style.setProperty("grid-template-rows", `repeat(16 ,2fr)`);
+});
+gridCells();
